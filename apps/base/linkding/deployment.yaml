@@ -29,11 +29,6 @@ spec:
 
           securityContext:
             allowPrivilegeEscalation: false
-
-          envFrom:
-            - secretRef:
-              name: default-user
-
       volumes:
         - name: linkding-data
           persistentVolumeClaim:
