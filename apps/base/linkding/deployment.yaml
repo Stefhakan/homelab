@@ -31,8 +31,6 @@ spec:
             allowPrivilegeEscalation: false
 
           envFrom:
-            #- configMapRef:
-              #name: linkding-configmap
             - secretRef:
               name: default-user
 
