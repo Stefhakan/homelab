@@ -38,7 +38,7 @@ spec:
         hosts:
           - grs.adhakhomelab.com
 
-        #tls:
-          #- secretName: grafana-tls-secret
-            #hosts:
-              #- grs.adhakhomelab.com
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grs.adhakhomelab.com
