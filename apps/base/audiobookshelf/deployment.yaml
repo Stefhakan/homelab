@@ -21,13 +21,17 @@ spec:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3005
 
           volumeMounts:
             - name: audiobookshelf-data
               mountPath: /config
             - name: audiobookshelf-data
               mountPath: /metadata
+
+          envFrom:
+            - configMapRef:
+                name: configenv
 
           #securityContext:
             #allowPrivilegeEscalation: false
