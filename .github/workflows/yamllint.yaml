@@ -1,0 +1,3 @@
+ignore:
+  - "/clusters/staging/flux-systems/"
+  - "/.github/workflows/
