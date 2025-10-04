@@ -2,6 +2,7 @@ extends: default
 
 ignore:
   - "/clusters/"
+  - "/apps/staging/linkding/cloudflare.yaml"
 
 rules:
   line-length:

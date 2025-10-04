@@ -16,4 +16,3 @@ spec:
                   number: 3005
             path: /
             pathType: Prefix
-
