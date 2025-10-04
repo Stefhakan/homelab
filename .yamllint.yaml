@@ -1,4 +1,4 @@
 extends: default
 
 ignore:
-  - "./clusters/staging/flux-systems/"
+  - "/clusters/"
