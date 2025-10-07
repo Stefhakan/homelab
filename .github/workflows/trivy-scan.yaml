@@ -22,7 +22,7 @@ jobs:
           severity: 'CRITICAL,HIGH'
 
       - name: Run Trivy for audiobookshelf image
-        uses: aquasecurity/trivy-actions@master
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'ghcr.io/advplyr/audiobookshelf:latest'
           format: 'table'
