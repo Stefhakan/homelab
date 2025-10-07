@@ -24,7 +24,7 @@ jobs:
 
       - name: Scan Images
         run: |
-          for image in ${{ steps.images.outputs.image }};do
+          for image in ${{ steps.images.outputs.images }};do
             echo "Scanning image: $image"
             trivy image --severity HIGH,CRITICAL --format table $image
           done
