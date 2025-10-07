@@ -20,3 +20,12 @@ jobs:
           exit-code: 1
           ignore-unfixed: 'true'
           severity: 'CRITICAL,HIGH'
+
+      - name: Run Trivy for audiobookshelf image
+        uses: aquasecurity/trivy-actions@master
+        with:
+          image-ref: 'ghcr.io/advplyr/audiobookshelf:latest'
+          format: 'table'
+          exit-code: 1
+          ignore-unfixed: 'true'
+          severity: 'CRITICAL, HIGH'
