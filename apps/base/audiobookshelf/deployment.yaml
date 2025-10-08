@@ -25,10 +25,12 @@ spec:
               protocol: TCP
 
           volumeMounts:
-            - name: audiobookshelf-data
+            - name: audiobookshelf-config
               mountPath: /config
-            - name: audiobookshelf-data
+            - name: audiobookshelf-metadata
               mountPath: /metadata
+            - name: audiobookshelf-audiobooks
+              mountPath: /audiobooks
 
           envFrom:
             - configMapRef:
@@ -37,9 +39,15 @@ spec:
           #securityContext:
             #allowPrivilegeEscalation: false
 
-      volumes:
-        - name: audiobookshelf-data
-          persistentVolumeClaim:
-            claimName: audiobookshelf-data-pvc
-
       restartPolicy: Always
+
+      volumes:
+        - name: audiobookshelf-config
+          persistentVolumeClaim:
+            claimName: audiobookshelf-config
+        - name: audiobookshelf-metadata
+          persistentVolumeClaim:
+            claimName: audiobookshelf-metadata
+        - name: audiobookshelf-audiobooks
+          persistentVolumeClaim:
+            claimName: auidobookshelf-audiobooks
