@@ -50,4 +50,4 @@ spec:
             claimName: audiobookshelf-metadata
         - name: audiobookshelf-audiobooks
           persistentVolumeClaim:
-            claimName: auidobookshelf-audiobooks
+            claimName: audiobookshelf-audiobooks
